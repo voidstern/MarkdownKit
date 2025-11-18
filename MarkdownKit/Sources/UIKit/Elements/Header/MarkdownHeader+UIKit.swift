@@ -11,7 +11,11 @@
 import UIKit
 
 public extension MarkdownHeader {
+#if os(watchOS)
+    static let defaultFont = UIFont.boldSystemFont(ofSize: 11)
+#else
     static let defaultFont = UIFont.boldSystemFont(ofSize: UIFont.smallSystemFontSize)
+#endif
 }
 
 #endif
